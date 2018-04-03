@@ -1,5 +1,3 @@
-import java.util.Date;
-
 class Block(
         val hash: String,
         val previousHash: String,
