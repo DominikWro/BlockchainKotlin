@@ -42,4 +42,14 @@ class Block(
         }
         return true
     }
+
+    fun mineBlock(difficulty:int){
+        val target = String(CharArray(difficulty)).replace('\u0000', '0')
+        while (!hash.substring( 0, difficulty).equals(target)){
+            nonce ++;
+            val hash = calculateHash()
+        }
+    println("Block Mined!!! : " + hash)
+    }
+
 }
